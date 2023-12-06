@@ -33,13 +33,13 @@ class WeCom extends NotificationProvider {
     composeMessage(heartbeatJSON, msg) {
         let title;
         if (msg != null && heartbeatJSON != null && heartbeatJSON["status"] === UP) {
-            title = "UptimeKuma Monitor Up";
+            title = "SLO Monitor Up";
         }
         if (msg != null && heartbeatJSON != null && heartbeatJSON["status"] === DOWN) {
-            title = "UptimeKuma Monitor Down";
+            title = "SLO Monitor Down";
         }
         if (msg != null) {
-            title = "UptimeKuma Message";
+            title = "SLO Monitor Message";
         }
         return {
             msgtype: "text",
